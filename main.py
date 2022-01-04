@@ -48,7 +48,8 @@ def help(): #affichage de l'ecran
           initialisation()
 
 def menu(): #menu de fin pour rejouer ou quitter
-  ecran.blit(pygame.image.load("menu.png").convert(), (220, 500))
+  time.sleep(1)
+  ecran.blit(pygame.image.load("menu.png").convert(), (230, 362))
   pygame.display.flip()
   while True:
     for event in pygame.event.get():
@@ -109,7 +110,7 @@ def pendu():
     if p == False:
       o += 1
       nombre = "pendu" + str(o) + ".png"
-      ecran.blit(pygame.image.load(nombre).convert(), (400, 200))
+      ecran.blit(pygame.image.load(nombre).convert(), (120, 0))
       pygame.display.flip()
     for l in range(len(e)):
       if e[l] != 0:
